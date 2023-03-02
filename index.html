@@ -184,19 +184,26 @@
             </li>
         </ul>
     </section>
+    <section class="contato">
+        <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+        <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        <input type="email" class="contato__email" placeholder="Cadastre seu e-mail">
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets'
-            },
-            spaceBetween: 10,
+    <div class="carrossel__scripts">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets'
+                },
+                spaceBetween: 10,
 
-            slidesPerView: 3,
-        });
-    </script>
+                slidesPerView: 3,
+            });
+        </script>
+    </div>
 </body>
 
 </html>
