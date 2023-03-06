@@ -78,3 +78,38 @@
     text-decoration: none;
     padding: 1.2em 2.3em;
 }
+.carrossel__titulo2{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .carrossel__titulo{
+        display: none;
+    }
+    .carrossel__titulo2{
+        display: block;
+        color: var(--laranja);
+        background-color: var(--branco);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 26px;
+        padding: 2em 0 1em;
+        font-weight: 700;
+    }
+    .swiper{
+        width:60%;
+    }
+    
+    .swiper-pagination{
+        margin: 2em 0 3em;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        display: block;
+        top: 60%;
+        
+    }
+    .card{
+        width: 60%;
+        margin: 2em auto;
+    }
+}
