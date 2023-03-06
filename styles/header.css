@@ -54,12 +54,10 @@
     text-transform: uppercase;
 }
 
-.container__botao {
-    display: none;
-}
-
+.container__botao,
 .container__titulo,
-.opções {
+.opções,
+.container__texto {
     display: none;
 }
 
@@ -106,5 +104,20 @@
 
     .opções__botao {
         display: none;
+    }
+}
+
+@media screen and (min-width:1728px){
+    .container__imagem-texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1em;
+    }
+    
+    .container__texto{
+        display: block;
+        font: 20px var(--preto);
+        /* padding: 2em 0.2em; */
     }
 }

@@ -19,7 +19,7 @@
     <header class="cabeçalho">
         <div class="container">
             <input type="checkbox" class="container__botao" id="menu">
-            <label for="menu">
+            <label for="menu" class="container__rotulo">
                 <span class="cabeçalho__menu-hamburguer container__imagem"></span>
             </label>
             <ul class="lista-menu">
@@ -72,10 +72,16 @@
 
         </ul>
         <div class="container">
-            <a href="#"><img src="img/Favoritos.svg" alt="Ícone de coração"
-                    class="container__imagem container__imagem-transparente"></a>
-            <a href="#"><img src="img/Compras.svg" alt="Carrinho de Compras" class="container__imagem"></a>
-            <a href="#"><img src="img/Usuário.svg" alt="Ícone do Usuário" class="container__imagem"></a>
+            <a href="#"><img src="img/Favoritos.svg" alt="Ícone de coração" class="container__imagem container__imagem-transparente"></a>
+            <div class="container__imagem-texto">
+                <a href="#"><img src="img/Compras.svg" alt="Carrinho de Compras" class="container__imagem"></a>
+                <h2 class="container__texto">Minha sacola</h2>
+            
+            </div>
+            <div class="container__imagem-texto">
+                <a href="#"><img src="img/Usuário.svg" alt="Ícone do Usuário" class="container__imagem"></a>
+                <h2 class="container__texto">Meu perfil</h2>
+            </div>
         </div>
     </header>
     <section class="banner">
@@ -87,6 +93,7 @@
         <h2 class="carrossel__titulo">Novos lançamentos</h2>
         <h2 class="carrossel__titulo2">Últimos lançamentos</h2>
         <!-- Slider main container -->
+        <div class="carrossel__swiper-card">
         <div class="swiper">
 
             <div class="swiper-pagination"></div>
@@ -101,12 +108,12 @@
                         alt='Livro sobre javascript assertivo da alura books'></div>
                 <div class='swiper-slide'><img src="img/Guia Front-end.png" alt="Livro guia front-end"></div>"
                 <div class='swiper-slide'><img src='img/Portugol.png' alt='Livro sobre portugol'></div>
-
-
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
+
+        </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
 
             <div class="card">
                 <!-- 1ª Linha -->
@@ -118,7 +125,7 @@
                         <p class="descrição__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
                     </div>
                     <!-- 2ª Coluna -->
-                    <img src="img/Angular.png" alt="">
+                    <img src="img/Angular.png" alt="Imagem logo da Linguagem Angular">
                 </div>
 
                 <!-- 2º Linha -->
@@ -132,6 +139,7 @@
                     <a href="#" class="botão__saibamais">Saiba Mais</a>
                 </div>
             </div>
+        </div>
 
 
     </section>
@@ -139,27 +147,24 @@
         <h2 class="carrossel__titulo">Mais vendidos</h2>
         <h2 class="carrossel__titulo2">Mais vendidos</h2>
         <!-- Slider main container -->
-        <div class="swiper">
+        <div class="carrossel__swiper-card">
+            <div class="swiper">
 
-            <div class="swiper-pagination"></div>
-            <div class="swiper-wrapper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
 
-                <!-- Slides -->
-                <div class="swiper-slide"><img src='img/ApacheKafka.png'
-                        alt='Livro sobre apache kafka e spring boot da alura books.'></div>
-                <div class="swiper-slide"><img src='img/Liderança.png'
-                        alt='Livro sobre liderança em design da alura books'></div>
-                <div class="swiper-slide"><img src='img/Javascript.png'
-                        alt='Livro sobre javascript assertivo da alura books'></div>
-                <div class='swiper-slide'><img src="img/Guia Front-end.png" alt="Livro guia front-end"></div>"
-                <div class='swiper-slide'><img src='img/Portugol.png' alt='Livro sobre portugol'></div>
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src='img/ApacheKafka.png'
+                            alt='Livro sobre apache kafka e spring boot da alura books.'></div>
+                    <div class="swiper-slide"><img src='img/Liderança.png'
+                            alt='Livro sobre liderança em design da alura books'></div>
+                    <div class="swiper-slide"><img src='img/Javascript.png'
+                            alt='Livro sobre javascript assertivo da alura books'></div>
+                    <div class='swiper-slide'><img src="img/Guia Front-end.png" alt="Livro guia front-end"></div>"
+                    <div class='swiper-slide'><img src='img/Portugol.png' alt='Livro sobre portugol'></div>
+                </div>
 
-
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
-
             <div class="card">
                 <!-- 1ª Linha -->
                 <div class="card__descrição">
@@ -186,6 +191,7 @@
                     <a href="#" class="botão__saibamais">Saiba Mais</a>
                 </div>
             </div>
+        </div>
     </section>
 
     <section class="tópicos">
@@ -305,21 +311,18 @@
             </li>
         </ul>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            },
+            spaceBetween: 10,
 
-    <div class="carrossel__scripts">
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script>
-            const swiper = new Swiper('.swiper', {
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets'
-                },
-                spaceBetween: 10,
-
-                slidesPerView: 3,
-            });
-        </script>
-    </div>
+            slidesPerView: 3,
+        });
+    </script>
 </body>
 
 </html>
