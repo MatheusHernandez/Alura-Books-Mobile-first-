@@ -143,7 +143,7 @@
     }
     
     .container__texto{
-        align-items: center;
+        display: block;
         text-decoration: none;
         font: 20px var(--preto)
     }
