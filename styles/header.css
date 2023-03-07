@@ -7,6 +7,15 @@
     display: inline-block;
 }
 
+.container__botao:checked~ .container__rotulo > .cabeçalho__menu-hamburguer{
+    background-image: url(../img/MenuAberto.png);
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background-color: var(--azul);
+}
+
+
 .cabeçalho {
     background-color: var(--branco);
     display: flex;
@@ -110,14 +119,21 @@
 @media screen and (min-width:1728px){
     .container__imagem-texto{
         display: flex;
-        justify-content: center;
         align-items: center;
-        padding-right: 1em;
+        text-decoration: none;
+        font: 20px var(--preto);
     }
     
     .container__texto{
         display: block;
+        text-decoration: none;
         font: 20px var(--preto);
         /* padding: 2em 0.2em; */
+    }
+    .cabeçalho{
+        padding: 0 2em;
+    }
+    .opções{
+        margin-right: auto;
     }
 }
