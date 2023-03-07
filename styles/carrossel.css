@@ -84,6 +84,10 @@
     display: none;
 }
 
+.botão__saibamais:active {
+    background-color: var(--azul-escuro);
+}
+
 @media screen and (min-width: 1024px){
     .carrossel__titulo{
         display: none;

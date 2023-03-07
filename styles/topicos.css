@@ -28,6 +28,11 @@
     font-size: 14px;
 }
 
+.tópicos__link:hover {
+    color: var(--laranja);
+    background-color: var(--branco);
+}
+
 @media screen and (min-width: 1024px) {
     
     .tópicos__titulo{
