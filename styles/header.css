@@ -143,7 +143,9 @@
     }
     
     .container__texto{
-        display: block;
+        align-items: center;
+        text-decoration: none;
+        font: 20px var(--preto)
     }
 
     .opções{
